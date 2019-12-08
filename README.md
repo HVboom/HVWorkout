@@ -1,7 +1,4 @@
----
-title: HVWorkout
-layout: page
----
+# HVWorkout
 
 ## Tech Stack
 * [Rails](https://rubyonrails.org) API only backend using [PostgreSQL](https://www.postgresql.org) database
@@ -37,10 +34,10 @@ layout: page
 
   ```yaml
   ...
-	
-  # Allow everything from my hosts
-  config.hosts << /.*\.hvboom\.org\Z/
-	
+  
+  # Allow all subdomains (indicated by the first dot) of my virtual host
+  config.hosts << '.hvboom.org'
+  
   ...
   ```
 	
