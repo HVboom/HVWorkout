@@ -5,6 +5,7 @@
     %meta{name: 'viewport', content: 'width=device-width, initial-scale=1.0'}/
     %title= content_for?(:title) ? yield(:title) : HVWorkout
     %meta{name: 'description', content: "#{content_for?(:description) ? yield(:description) : 'HVWorkout - Tracking Kieser Training exercises'}"}/
+    = render 'layouts/favicon'
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
