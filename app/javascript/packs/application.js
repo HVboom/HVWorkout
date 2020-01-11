@@ -15,7 +15,10 @@ import '../stylesheets/application'
 import 'jquery'
 import 'popper.js'
 import 'bootstrap'
-import '../_bootstrap_custom.js'
+import '../_bootstrap_custom'
+
+// Activate fontawesome
+import '@fortawesome/fontawesome-free/js/all';
 
 // Copy favicon related files
 import '../favicons/favicon'
