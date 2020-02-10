@@ -1,0 +1,4 @@
+.hvworkout {
+  // using fixed top navigation - therfore a padding for <main> is necessary
+  &__has-fixed-top-header { padding-top: 4.5rem; }
+}
