@@ -1,3 +1,6 @@
+# Version 0.5.1
+* Security fix for vulnerability in rack 2.0.7 as reported by GitHub
+
 # Version 0.5
 * Feature: [Layout](https://docs.hvboom.org/HVWorkout/features/layout.html)
 
