@@ -1,4 +1,33 @@
 .hvworkout {
+  // define utility classes to hide content on smaller screens
+  &__d-xl-only,
+  &__d-lg-only,
+  &__d-md-only,
+  &__d-sm-only,
+  &__d-xs-only {
+    display: none;
+  }
+  @include media-breakpoint-only(xl) {
+    &__d-xl-only { display: initial; }
+  }
+  @include media-breakpoint-only(lg) {
+    &__d-lg-only { display: initial; }
+  }
+  @include media-breakpoint-only(md) {
+    &__d-md-only { display: initial; }
+  }
+  @include media-breakpoint-only(sm) {
+    &__d-sm-only { display: initial; }
+  }
+  @include media-breakpoint-only(xs) {
+    &__d-xs-only { display: initial; }
+  }
+
   // using fixed top navigation - therfore a padding for <main> is necessary
   &__has-fixed-top-header { padding-top: 4.5rem; }
+
+  &__brand-img {
+    height: 2rem;
+    vertical-align: top;
+  }
 }

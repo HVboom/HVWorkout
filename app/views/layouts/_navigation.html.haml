@@ -1,6 +1,6 @@
 %nav.navbar.fixed-top.navbar-expand-md.navbar-light.bg-light
-  .container
-    = link_to 'HVboom - HVWorkout', root_path, class: 'navbar-brand'
+  .container-md
+    = render 'layouts/brand'
     %button.navbar-toggler{'data-target': '#navbar', 'data-toggle': 'collapse', 'aria-controls': 'navbar', 'aria-expanded': 'false', 'aria-label': 'Toggle navigation', type: 'button'}
       %span.navbar-toggler-icon
     #navbar.collapse.navbar-collapse
