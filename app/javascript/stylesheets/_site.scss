@@ -30,4 +30,29 @@
     height: 2rem;
     vertical-align: top;
   }
+
+  &__user-img {
+    @extend .rounded-circle;
+    height: 2rem;
+    vertical-align: middle;
+  }
+
+  &__profile-gravatar {
+    @extend .mx-auto;
+    @extend .mb-4;
+
+    &-img {
+      @extend .rounded-circle;
+      @extend .mx-auto;
+      @extend .d-block;
+    }
+
+    &-link {
+      @extend .text-center;
+    }
+  }
+}
+
+form + h3 {
+  @extend .mt-5;
 }

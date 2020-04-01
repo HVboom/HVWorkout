@@ -1,0 +1,13 @@
+- if current_user
+  .navbar-nav.nav-item.dropdown
+    %a#userDropdown.nav-link.dropdown-toggle{aria: {expanded: 'false', haspopup: 'true'}, data: {toggle: 'dropdown'}, href: '#', role: 'menu'}
+      = user_gravatar_tag current_user
+      = current_user.nickname
+    .dropdown-menu{aria: {labelledby: 'userDropdown'}}
+      = link_to edit_registration_path(current_user), class: 'dropdown-item' do
+        = fa_icon 'user'
+        Profile
+      .dropdown-divider
+      = link_to destroy_user_session_path, method: :delete, class: 'dropdown-item' do
+        = fa_icon 'sign-out-alt'
+        Log out
