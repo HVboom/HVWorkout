@@ -1,0 +1,6 @@
+- back ||= back.nil?
+
+= form.button :submit, submit, class: 'btn-primary'
+= form.button :button, 'Reset', type: :reset, class: 'btn-outline-secondary'
+-if back
+  = link_to 'Back', :back, class: 'btn btn-outline-secondary float-right'

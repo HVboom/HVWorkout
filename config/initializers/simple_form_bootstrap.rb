@@ -411,11 +411,14 @@ SimpleForm.setup do |config|
 
 
   # The default wrapper to be used by the FormBuilder.
-  config.default_wrapper = :vertical_form
+  # config.default_wrapper = :vertical_form
+  config.default_wrapper = :floating_labels_form
 
   # Custom wrappers for input types. This should be a hash containing an input
   # type as key and the wrapper that will be used for all inputs with specified type.
   config.wrapper_mappings = {
+    select:        :floating_labels_select,
+
     boolean:       :vertical_boolean,
     check_boxes:   :vertical_collection,
     date:          :vertical_multi_select,

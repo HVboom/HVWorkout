@@ -1,9 +1,5 @@
 -# frozen_string_literal: true
-= simple_form_for @<%= singular_table_name %>,
-  wrapper: :floating_labels_form,
-  wrapper_mappings: {
-    select: :floating_labels_select
-  } do |f|
+= simple_form_for @<%= singular_table_name %> do |f|
   = f.error_notification
   = f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present?
 
@@ -13,5 +9,4 @@
   <%- end -%>
 
   .form-actions
-    = f.button :submit, class: 'btn-primary'
-    = f.button :button, 'Cancel', type: 'reset', class: 'btn-outline-secondary'
+    = render 'shared/actions', form: f, submit: 'Submit'
