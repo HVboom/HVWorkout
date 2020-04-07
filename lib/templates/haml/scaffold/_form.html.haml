@@ -5,7 +5,10 @@
 
   .form-inputs
   <%- attributes.each do |attribute| -%>
-    = f.<%= attribute.reference? ? :association : :input %> :<%= attribute.name %>
+    = f.<%= attribute.reference? ? :association : :input %> :<%= attribute.name %>,
+      required: true,
+      autofocus: true,
+      input_html: { autocomplete: '<%= attribute.name %>', placeholder: true }
   <%- end -%>
 
   .form-actions
