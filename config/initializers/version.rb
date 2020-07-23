@@ -1,3 +1,3 @@
 module HVWorkout
-  VERSION = '0.5.1'
+  VERSION = '0.8.0'
 end
