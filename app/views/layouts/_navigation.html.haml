@@ -1,7 +1,8 @@
 %nav.navbar.fixed-top.navbar-expand-md.navbar-light.bg-light
-  .container
-    = link_to 'HVboom - HVWorkout', root_path, class: 'navbar-brand'
-    %button.navbar-toggler{'data-target': '#navbar', 'data-toggle': 'collapse', 'aria-controls': 'navbar', 'aria-expanded': 'false', 'aria-label': 'Toggle navigation', type: 'button'}
+  .container-md
+    = render 'layouts/brand'
+    = render 'layouts/authentication'
+    %button.navbar-toggler{data: {target: '#navbar', toggle: 'collapse'}, aria: {controls: 'navbar', expanded: 'false', label: 'Toggle navigation'}, type: 'button'}
       %span.navbar-toggler-icon
     #navbar.collapse.navbar-collapse
       %ul.navbar-nav.ml-auto

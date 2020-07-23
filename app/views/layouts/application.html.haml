@@ -2,7 +2,7 @@
 %html{lang: 'en'}
   %head
     %meta{'http-equiv': 'Content-Type', content: 'text/html; charset=UTF-8'}/
-    %meta{name: 'viewport', content: 'width=device-width, initial-scale=1.0'}/
+    %meta{name: 'viewport', content: 'width=device-width, initial-scale=1.0, shrink-to-fit=no'}/
     %title= content_for?(:title) ? yield(:title) : HVWorkout
     %meta{name: 'description', content: "#{content_for?(:description) ? yield(:description) : 'HVWorkout - Tracking Kieser Training exercises'}"}/
     = render 'layouts/favicon'
@@ -14,5 +14,5 @@
   %body.hvworkout
     %header
       = render 'layouts/navigation'
-    %main.container.hvworkout__has-fixed-top-header
+    %main.container-md.hvworkout__has-fixed-top-header
       = yield
