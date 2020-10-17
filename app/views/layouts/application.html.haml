@@ -1,7 +1,8 @@
 !!!
-%html{lang: 'en'}
+%html
   %head
     %meta{'http-equiv': 'Content-Type', content: 'text/html; charset=UTF-8'}/
+    %meta{'http-equiv': 'Content-Language', content: "#{locale}"}/
     %meta{name: 'viewport', content: 'width=device-width, initial-scale=1.0, shrink-to-fit=no'}/
     %title= content_for?(:title) ? yield(:title) : HVWorkout
     %meta{name: 'description', content: "#{content_for?(:description) ? yield(:description) : 'HVWorkout - Tracking Kieser Training exercises'}"}/

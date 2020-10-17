@@ -35,6 +35,12 @@ gem 'haml-rails'
 gem 'font_awesome5_rails'
 gem 'simple_form'
 
+# Multi-Language support
+gem 'rails-i18n'
+
+# Select preferred user language
+gem 'http_accept_language'
+
 # Authentication
 gem 'devise'
 
