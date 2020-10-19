@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  around_action :switch_locale
+  prepend_before_action :switch_locale
 
   before_action :authenticate_user!
   before_action :configure_permitted_parameters, if: :devise_controller?
@@ -18,10 +18,9 @@ class ApplicationController < ActionController::Base
     {locale: I18n.locale}
   end
 
-  def switch_locale(&action)
-    locale = params[:locale] ||
-             http_accept_language.compatible_language_from(I18n.available_locales) ||
-             I18n.default_locale
-    I18n.with_locale(locale, &action)
+  def switch_locale
+    I18n.locale = params[:locale] ||
+                  http_accept_language.compatible_language_from(I18n.available_locales) ||
+                  I18n.default_locale
   end
 end

@@ -34,8 +34,5 @@ module HVWorkout
 
     # Allow everything from my hosts
     config.hosts << /.*\.hvboom\.org\Z/
-
-    # Fix issue with Devise
-    config.middleware.use I18n::Middleware
   end
 end
