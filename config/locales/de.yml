@@ -1,0 +1,10 @@
+de:
+  layouts:
+    application:
+      app:
+        title: 'HVWorkout'
+        description: 'HVWorkout - Protokoll meiner Kieser Training Übungen'
+    multi_language:
+      language:
+        selection: 'Sprachauswahl'
+        name: 'Deutsch'

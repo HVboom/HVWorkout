@@ -1,0 +1,10 @@
+en:
+  layouts:
+    application:
+      app:
+        title: 'HVWorkout'
+        description: 'HVWorkout - Tracking Kieser Training exercises'
+    multi_language:
+      language:
+        selection: 'Language selection'
+        name: 'English'

@@ -1,8 +1,8 @@
 .navbar-nav.navbar-right.nav-item.dropdown
-  %a#languageDropdown.nav-link.dropdown-toggle{aria: {label: "#{t(:language_selection)}", expanded: 'false', haspopup: 'true'}, data: {toggle: 'dropdown'}, href: '#', role: 'menu'}
-    = t(:language_name, locale: locale)
+  %a#languageDropdown.nav-link.dropdown-toggle{aria: {label: "#{t('.language.selection')}", expanded: 'false', haspopup: 'true'}, data: {toggle: 'dropdown'}, href: '#', role: 'menu'}
+    = t('.language.name', locale: locale)
   .dropdown-menu{aria: {labelledby: 'languageDropdown'}}
     - I18n.available_locales.reject{|l| l == locale}.sort.each do |locale|
       = link_to url_for(locale: locale), class: 'dropdown-item' do
         -# = fa_icon 'user'
-        = t(:language_name, locale: locale)
+        = t('.language.name', locale: locale)
