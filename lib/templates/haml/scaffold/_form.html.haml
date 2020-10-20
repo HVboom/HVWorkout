@@ -4,12 +4,11 @@
   = f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present?
 
   .form-inputs
-  <%- attributes.each do |attribute| -%>
-    = f.<%= attribute.reference? ? :association : :input %> :<%= attribute.name %>,
-      required: true,
-      autofocus: true,
-      input_html: { autocomplete: '<%= attribute.name %>', placeholder: true }
-  <%- end -%>
+    - attributes.each do |attribute|
+      = f.<%= attribute.reference? ? :association : :input %> :<%= attribute.name %>,
+        required: true,
+        autofocus: true,
+        input_html: { autocomplete: '<%= attribute.name %>', placeholder: true }
 
   .form-actions
-    = render 'shared/actions', form: f, submit: 'Submit'
+    = render 'shared/actions', form: f, submit: t('.submit')

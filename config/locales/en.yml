@@ -1,10 +1,27 @@
 en:
+  activerecord:
+    attributes:
+      user:
+        nickname: 'Nickname'
+  gravatar:
+    edit: 'Edit'
+    home: 'on Gravatar.com'
   layouts:
     application:
       app:
-        title: 'HVWorkout'
         description: 'HVWorkout - Tracking Kieser Training exercises'
+        title: 'HVWorkout'
+    authentication:
+      log_out: 'Log out'
+      profile: 'Profile'
     multi_language:
       language:
-        selection: 'Language selection'
         name: 'English'
+        selection: 'Language selection'
+    navigation:
+      about: 'About'
+      home: 'Home'
+  shared:
+    actions:
+      back: 'Back'
+      reset: 'Reset'

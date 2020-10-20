@@ -9,10 +9,10 @@
         %li.nav-item
           = link_to home_path, class: 'nav-link' do
             = fa_icon 'home'
-            Home
+            = t('.home')
         %li.nav-item
           = link_to about_path, class: 'nav-link' do
             = fa_icon 'address-card'
-            About
+            = t('.about')
     = render 'layouts/multi_language'
 
