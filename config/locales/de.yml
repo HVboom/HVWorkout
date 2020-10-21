@@ -1,10 +1,27 @@
 de:
+  activerecord:
+    attributes:
+      user:
+        nickname: 'Kurzname'
+  gravatar:
+    edit: 'Bearbeiten'
+    home: 'auf Gravatar.com'
   layouts:
     application:
       app:
-        title: 'HVWorkout'
         description: 'HVWorkout - Protokoll meiner Kieser Training Übungen'
+        title: 'HVWorkout'
+    authentication:
+      log_out: 'Ausloggen'
+      profile: 'Profil'
     multi_language:
       language:
-        selection: 'Sprachauswahl'
         name: 'Deutsch'
+        selection: 'Sprachauswahl'
+    navigation:
+      about: 'Info'
+      home: 'Startseite'
+  shared:
+    actions:
+      back: 'Zurück'
+      reset: 'Zurücksetzen'
