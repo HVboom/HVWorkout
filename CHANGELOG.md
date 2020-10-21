@@ -1,3 +1,7 @@
+# Version 0.9
+* Feature: [Mulit-Language (I18n)](https://docs.hvboom.org/HVWorkout/features/multi-language.html)
+* Bug fix: Nickname could not be updated
+
 # Version 0.8
 * Feature: [Authentication](https://docs.hvboom.org/HVWorkout/features/authentication.html) with Devise
 * Feature: [Layout](https://docs.hvboom.org/HVWorkout/features/layout.html)

@@ -1,3 +1,4 @@
+-# frozen_string_literal: true
 - if current_user
   .navbar-nav.nav-item.dropdown
     %a#userDropdown.nav-link.dropdown-toggle{aria: {expanded: 'false', haspopup: 'true'}, data: {toggle: 'dropdown'}, href: '#', role: 'menu'}
@@ -6,8 +7,8 @@
     .dropdown-menu{aria: {labelledby: 'userDropdown'}}
       = link_to edit_registration_path(current_user), class: 'dropdown-item' do
         = fa_icon 'user'
-        Profile
+        = t('.profile')
       .dropdown-divider
       = link_to destroy_user_session_path, method: :delete, class: 'dropdown-item' do
         = fa_icon 'sign-out-alt'
-        Log out
+        = t('.log_out')

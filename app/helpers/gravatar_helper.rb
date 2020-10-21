@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module GravatarHelper
   # https://mixandgo.com/learn/the-beginners-guide-to-rails-helpers
 
@@ -15,7 +17,7 @@ module GravatarHelper
         (image_tag "#{Gravatar.url(user)}", alt: '', class: 'hvworkout__profile-gravatar-img') +
         (content_tag :div, class: 'hvworkout__profile-gravatar-link' do
           (content_tag :i, '', class: 'fas fa-edit').html_safe +
-          (content_tag :span, 'Edit', class: 'sr-only') + ' on Gravatar.com'
+          (content_tag :span, "#{t('edit', scope: [:gravatar])}", class: 'sr-only') + " #{t('home', scope: [:gravatar])}"
         end)
       end
     end
