@@ -5,5 +5,14 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,
          :confirmable, :trackable
 
+  before_validation :sanitize_parameter
+
   validates :nickname, uniqueness: { case_sensitive: false }, presence: true
+
+
+  private
+
+  def sanitize_parameter
+    self.nickname.squish!
+  end
 end
