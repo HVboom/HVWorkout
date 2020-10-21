@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Gravatar
   # https://en.gravatar.com/site/implement/images/
 

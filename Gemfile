@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 #ruby=ruby-2.7.2
 #ruby-gemset=HVWorkout
 #
@@ -55,6 +57,8 @@ group :development do
   gem 'web-console' # , '>= 3.3.0'
   gem 'awesome_print'
   gem 'pry-rails'
+
+  gem 'magic_frozen_string_literal'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

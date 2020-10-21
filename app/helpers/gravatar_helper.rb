@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module GravatarHelper
   # https://mixandgo.com/learn/the-beginners-guide-to-rails-helpers
 
