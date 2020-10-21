@@ -35,8 +35,15 @@ gem 'haml-rails'
 gem 'font_awesome5_rails'
 gem 'simple_form'
 
+# Multi-Language support
+gem 'rails-i18n'
+
+# Select preferred user language
+gem 'http_accept_language'
+
 # Authentication
 gem 'devise'
+gem 'devise-i18n'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

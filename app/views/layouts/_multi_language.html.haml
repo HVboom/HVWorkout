@@ -1,0 +1,9 @@
+.navbar-nav.navbar-right.nav-item.dropdown
+  %a#languageDropdown.nav-link.dropdown-toggle{aria: {label: "#{t('.language.selection')}", expanded: 'false', haspopup: 'true'}, data: {toggle: 'dropdown'}, href: '#', role: 'menu'}
+    = image_pack_tag "flags/#{locale}.svg", class: 'hvworkout__language-img'
+    %span.sr-only= t('.language.name', locale: locale)
+  .dropdown-menu{aria: {labelledby: 'languageDropdown'}}
+    - I18n.available_locales.reject{|l| l == locale}.sort.each do |locale|
+      = link_to url_for(locale: locale), class: 'dropdown-item' do
+        = image_pack_tag "flags/#{locale}.svg", class: 'hvworkout__language-img'
+        = t('.language.name', locale: locale)
