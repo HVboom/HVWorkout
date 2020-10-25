@@ -56,7 +56,14 @@ Rails.application.configure do
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   # config.file_watcher = ActiveSupport::EventedFileUpdateChecker
-  #
+
   # Configure allowed network IPs for web_console
-  config.web_console.permissions = %w( 2a04:ee41:4::/0 )
+  config.web_console.permissions = IPAddr.new('2a04:ee41:4::/0')
+
+  # Configure allowed network IPs for better_errors
+  if defined?(BetterErrors)
+    config.consider_all_requests_local = true
+    BetterErrors::Middleware.allow_ip! IPAddr.new('2a04:ee41:4::/0')
+    BetterErrors.use_pry!
+  end
 end

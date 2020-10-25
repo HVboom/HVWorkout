@@ -19,3 +19,6 @@
     %main.container-md.hvworkout__has-fixed-top-header{role: 'main'}
       = render 'layouts/messages'
       = yield
+    %footer
+      -if Rails.env.development?
+        = console

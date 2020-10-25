@@ -57,6 +57,8 @@ group :development do
   gem 'web-console' # , '>= 3.3.0'
   gem 'awesome_print'
   gem 'pry-rails'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 
   gem 'magic_frozen_string_literal'
 end
